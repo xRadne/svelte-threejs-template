@@ -2,12 +2,6 @@
 	"name": "threejs-sveltekit",
 	"version": "1.0.0",
 	"description": "Three.js example app built with Svelte",
-	"author": "Jason Sturges <jason@jsonsturges.com> (https://jasonsturges.com)",
-	"homepage": "https://jasonsturges.github.io//threejs-sveltekit/",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/jasonsturges/threejs-sveltekit"
-	},
 	"license": "ISC",
 	"keywords": [
 		"3d",
@@ -31,7 +25,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/kit": "next",
+		"@sveltejs/kit": "^1.11.0",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
 		"@typescript-eslint/parser": "^5.27.0",
 		"eslint": "^8.16.0",
@@ -43,7 +37,6 @@
 		"svelte-check": "^2.7.1",
 		"svelte-preprocess": "^4.10.6",
 		"tslib": "^2.3.1",
-		"typescript": "^4.7.4",
-		"vite": "^3.1.0-beta.1"
+		"typescript": "^4.7.4"
 	}
 }
