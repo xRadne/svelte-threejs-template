@@ -23,25 +23,25 @@ const hemisphereLight = new THREE.HemisphereLight(0xffffff, 0x444444);
 hemisphereLight.position.set(1, 1, 1);
 scene.add(hemisphereLight);
 
-let renderer;
+export const createScene = (el: HTMLCanvasElement) => {
+	const renderer = new THREE.WebGLRenderer({ antialias: true, canvas: el });
 
-const animate = () => {
-	requestAnimationFrame(animate);
-	cube.rotation.x += 0.01;
-	cube.rotation.y += 0.01;
-	renderer.render(scene, camera);
-};
+	const animate = () => {
+		requestAnimationFrame(animate);
+		cube.rotation.x += 0.01;
+		cube.rotation.y += 0.01;
+		renderer.render(scene, camera);
+	};
 
-const resize = () => {
-	renderer.setSize(window.innerWidth, window.innerHeight);
-	camera.aspect = window.innerWidth / window.innerHeight;
-	camera.updateProjectionMatrix();
-};
+	const resize = () => {
+		renderer.setSize(window.innerWidth, window.innerHeight);
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+	};
 
-export const createScene = (el) => {
-	renderer = new THREE.WebGLRenderer({ antialias: true, canvas: el });
+	window.addEventListener('resize', resize);
+
 	resize();
 	animate();
 };
 
-window.addEventListener('resize', resize);
